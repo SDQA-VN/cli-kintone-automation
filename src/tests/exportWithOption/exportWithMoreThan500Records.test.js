@@ -4,7 +4,7 @@ import { users, exportTestApps as apps, filePaths } from '../../common/config';
 import { getFieldArray } from '../../utils/csvUtils';
 import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 
-describe('Export with --export option: Export data with number of records > 500', () => {
+describe.skip('Export with --export option: Export data with number of records > 500', () => {
     let fieldNames = '';
     const appInfo = apps.normalSpaceApp.appWithAttachment;
     const userCreds = users.admin;
