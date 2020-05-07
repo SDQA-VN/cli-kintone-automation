@@ -8,8 +8,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-#  schedule:
-#    - cron: '*/30 * * * *'
+  schedule:
+    - cron: '*/59 * * * *'
 
 jobs:
    test_mac:
