@@ -34,15 +34,15 @@ jobs:
        run: npm run test src/tests/exportWithOption
      - name: export test without --export option
        run: npm run test src/tests/exportWithoutOption
-  test_linux:
-    needs: test_mac
-    strategy:
+   test_linux:
+     needs: test_mac
+     strategy:
       matrix:
         platform: [ ubuntu-latest ]
         node-version: [ 12.16.3 ]
-    runs-on: ${{ matrix.platform }}
+     runs-on: ${{ matrix.platform }}
 
-    steps:
+     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -57,14 +57,14 @@ jobs:
         run: npm run test src/tests/exportWithOption
       - name: export test without --export option
         run: npm run test src/tests/exportWithoutOption
-  test_windows:
-    needs: [ test_mac, test_linux ]
-    strategy:
+   test_windows:
+     needs: [ test_mac, test_linux ]
+     strategy:
       matrix:
         platform: [ windows-latest ]
         node-version: [ 12.16.3 ]
-    runs-on: ${{ matrix.platform }}
-    steps:
+     runs-on: ${{ matrix.platform }}
+     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
