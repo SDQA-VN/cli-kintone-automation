@@ -78,7 +78,8 @@ describe('Export with --export option: Export data with output format (-o)', () 
 
         await exportTest.verifyExportedData(
             actualExportedJsonDataFile,
-            expectedExportedJsonDataFile
+            expectedExportedJsonDataFile,
+            true
         );
     });
 
@@ -132,7 +133,8 @@ describe('Export with --export option: Export data with output format (-o)', () 
 
         await exportTest.verifyExportedData(
             actualExportedJsonDataFile,
-            expectedExportedJsonDataFile
+            expectedExportedJsonDataFile,
+            true
         );
     });
 

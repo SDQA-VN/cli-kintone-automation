@@ -248,6 +248,7 @@ const makeJsonDataFileWithAttachment = async (data, filePath) => {
         }
         if (record.Attachment.value.length !== 0) {
             delete record.Attachment.value[0].fileKey;
+            delete record.Attachment.value[0].size;
         }
         delete record.$id;
     });

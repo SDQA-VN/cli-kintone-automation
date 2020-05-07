@@ -26,6 +26,7 @@
     "jest": "^25.1.0",
     "jest-html-reporters": "^1.2.1",
     "jest-junit": "^10.0.0",
+    "json-hash": "^1.2.0",
     "mv": "^2.1.1",
     "prettier": "1.19.1",
     "request": "^2.88.2",

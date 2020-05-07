@@ -13,7 +13,7 @@ const getAttachmentList = async csvFilePath => {
             .on('data', row => {
                 const filenameArray = row.Attachment.split('\n');
                 for (const i of filenameArray) {
-                    fileNameArray.push(i);
+                    fileNameArray.push(i.trim());
                 }
             })
             .on('end', () => {

@@ -90,7 +90,7 @@ describe('Export without --export option: Export data with encoding and output f
 
         const expectedExportedDataFile =
             filePaths.export_test.exportJsonDataWithEncodingOutputFormatParamExpected;
-        await exportTest.verifyExportedData(actualExportedDataFile, expectedExportedDataFile);
+        await exportTest.verifyExportedData(actualExportedDataFile, expectedExportedDataFile, true);
     });
 
     beforeAll(async () => {

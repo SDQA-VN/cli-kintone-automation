@@ -1,6 +1,7 @@
 const { exec } = require('child_process');
 const crypto = require('crypto');
 const fs = require('fs');
+const jsonHash = require('json-hash');
 
 const os_system = process.platform;
 
@@ -33,25 +34,35 @@ function executeCommand(cmd, showHelp = false) {
 /**
  * Hash csv file to string by SHA-256
  * @param {string} filePath
+ * @param {boolean} isJson
  * @param {string} algorithm
  * @return {Promise<string>}
  */
-function hashCsvFile(filePath, algorithm = 'sha256') {
-    return new Promise((resolve, reject) => {
-        const shasum = crypto.createHash(algorithm);
-        try {
-            const s = fs.createReadStream(filePath);
-            s.on('data', function(data) {
-                shasum.update(data);
-            });
-            s.on('end', function() {
-                const hash = shasum.digest('hex');
-                return resolve(hash);
-            });
-        } catch (error) {
-            return reject('calc fail');
-        }
-    });
+function hashCsvFile(filePath, isJson = false, algorithm = 'sha256') {
+    if (!isJson) {
+        return new Promise((resolve, reject) => {
+            const shasum = crypto.createHash(algorithm);
+            try {
+                const s = fs.createReadStream(filePath);
+                s.on('data', function(data) {
+                    shasum.update(data);
+                });
+                s.on('end', function() {
+                    const hash = shasum.digest('hex');
+                    return resolve(hash);
+                });
+            } catch (error) {
+                return reject('calc fail');
+            }
+        });
+    } else {
+        return new Promise((resolve, reject) => {
+            const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            const jsonHashValue = jsonHash.digest(jsonData);
+
+            return resolve(jsonHashValue);
+        });
+    }
 }
 
 /**

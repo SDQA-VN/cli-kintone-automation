@@ -85,4 +85,15 @@ export default class CliKintoneTestBase {
         }
         expect(result.toString()).toEqual(expect.stringContaining(message));
     }
+
+    /**
+     * @param {string} result
+     */
+    verifyNoRecordFoundMessage(message) {
+        const expectedMessage1 = 'No record found.';
+        const expectedMessage2 = 'Please check your query or permission settings.';
+
+        expect(message.toString()).toEqual(expect.stringContaining(expectedMessage1));
+        expect(message.toString()).toEqual(expect.stringContaining(expectedMessage2));
+    }
 }

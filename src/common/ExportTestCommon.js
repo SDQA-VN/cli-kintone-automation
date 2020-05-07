@@ -129,11 +129,12 @@ export default class ExportTestCommon extends CliKintoneTestBase {
     /**
      * @param {String} exportDataActual
      * @param {String} exportDataExpected
+     * @param {boolean} isJson
      * @returns {Promise<void>}
      */
-    async verifyExportedData(exportDataActual, exportDataExpected) {
-        const hashOfExportExpectedFile = await hashCsvFile(exportDataExpected);
-        const hashOfExportFile = await hashCsvFile(exportDataActual);
+    async verifyExportedData(exportDataActual, exportDataExpected, isJson = false) {
+        const hashOfExportExpectedFile = await hashCsvFile(exportDataExpected, isJson);
+        const hashOfExportFile = await hashCsvFile(exportDataActual, isJson);
 
         await expect(hashOfExportFile).toEqual(hashOfExportExpectedFile);
     }

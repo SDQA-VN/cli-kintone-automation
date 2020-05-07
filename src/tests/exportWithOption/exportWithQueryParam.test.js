@@ -4,6 +4,7 @@ import { users, exportTestApps as apps, filePaths } from '../../common/config';
 import { getFieldArray } from '../../utils/csvUtils';
 import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 import errorMessage from '../../common/kintoneCliErrorMessage.json';
+import { getFileContent } from '../../utils/fileUtils';
 
 describe('Export with --export option: Export data using query (-q)', () => {
     const appInfo = apps.normalSpaceApp.appWithoutAttachment;
@@ -62,8 +63,8 @@ describe('Export with --export option: Export data using query (-q)', () => {
         );
         await exportTest.exportWithUserNamePassword();
 
-        const expectedExportedDataFile = filePaths.export_test.exportCSVDataWithNoRecordFound;
-        await exportTest.verifyExportedData(actualExportedDataFile, expectedExportedDataFile);
+        const messageContent = await getFileContent(actualExportedDataFile);
+        await exportTest.verifyNoRecordFoundMessage(messageContent);
     });
 
     test('Case 169: Verify that error will be displayed when using non-existed field code', async () => {
