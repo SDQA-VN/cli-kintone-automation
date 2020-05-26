@@ -20,7 +20,7 @@ const fileInfo = {
 };
 
 const users = {
-    admin: new User(process.env.ADMIN_USERNAME, process.env.ADMIN_PASSWORD),
+    admin: new User(process.env.USERNAME, process.env.PASSWORD),
     basicAuthUser: new User(process.env.BASIC_USERNAME, process.env.BASIC_PASSWORD),
     normalUser: userList[0],
     userNoViewPermission: userList[1],
