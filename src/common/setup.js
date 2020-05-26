@@ -4,7 +4,7 @@ const request = require('request');
 const unzip = require('unzip-stream');
 const progress = require('cli-progress');
 
-const releasedVersion = process.env.RELEASE_VERSION || 'v0.11.1';
+const releasedVersion = process.env.RELEASE_VERSION;
 
 const baseReleasedUrl = `https://github.com/kintone/cli-kintone/releases/download/${releasedVersion}`;
 const platforms = {
