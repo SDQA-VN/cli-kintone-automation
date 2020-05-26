@@ -73,7 +73,7 @@ describe('Import with --import option: Authenticate with token (-t)', () => {
         importTest.verifyAppErrorMessage(result, expectedError);
     });
 
-    test.skip('C035: Verify that data can be imported correctly when using both Basic Authentication and API Token', async () => {
+    test('C035: Verify that data can be imported correctly when using both Basic Authentication and API Token', async () => {
         const basicAuthAppInfo = apps.basicAuthApp;
         const basicAuthUser = users.basicAuthUser;
         const basicAuthArg = `-U ${basicAuthUser.username} -P ${basicAuthUser.password}`;

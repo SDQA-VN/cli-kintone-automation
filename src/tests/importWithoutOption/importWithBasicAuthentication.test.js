@@ -4,7 +4,7 @@ import { makeQueryToGetAppData } from '../../common/helper';
 import { getFieldArray } from '../../utils/csvUtils';
 import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 
-describe.skip('Import without --import option: Basic Authentication with params (-U) (-P)', () => {
+describe('Import without --import option: Basic Authentication with params (-U) (-P)', () => {
     const appInfo = apps.basicAuthApp;
     const adminUser = users.admin;
     const basicAuthUser = users.basicAuthUser;

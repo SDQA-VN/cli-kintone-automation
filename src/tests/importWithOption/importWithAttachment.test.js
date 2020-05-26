@@ -4,7 +4,7 @@ import { makeQueryToGetAppData } from '../../common/helper';
 import { getFieldArray } from '../../utils/csvUtils';
 import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 
-describe.skip('Import with --import option: Import new attachment with file (-b)', () => {
+describe('Import with --import option: Import new attachment with file (-b)', () => {
     const appInfo = apps.normalSpaceApp;
     const userCreds = users.admin;
     const importedCSVFile = filePaths.import_test.importCSVDataWithAttachment;
@@ -66,7 +66,7 @@ describe.skip('Import with --import option: Import new attachment with file (-b)
 
     // This case take a lot of time to execute, especially when the network is slow
     // So it will be temporary set as skip
-    test.skip('C052: Verify the case in which upload file size is large (e.g.. <=10 Mb)', async () => {
+    test('C052: Verify the case in which upload file size is large (e.g.. <=10 Mb)', async () => {
         const importedDataFile = filePaths.import_test.importCSVDataWithLargeAttachment;
         const importTest = new ImportTestCommon(appInfo, userCreds, importedDataFile);
 
@@ -78,7 +78,7 @@ describe.skip('Import with --import option: Import new attachment with file (-b)
         await importTest.verifyImportedAttachments(fieldNames, query);
     });
 
-    test.only('C053: Verify the case uploading multiple files to one record', async () => {
+    test('C053: Verify the case uploading multiple files to one record', async () => {
         const importedDataFile = filePaths.import_test.importCSVDataWithMultiAttachmentsOnOneRecord;
         const importTest = new ImportTestCommon(appInfo, userCreds, importedDataFile);
 

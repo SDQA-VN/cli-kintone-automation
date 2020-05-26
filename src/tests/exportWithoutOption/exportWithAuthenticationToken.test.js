@@ -80,7 +80,7 @@ describe('Export without --export option: Authenticate with token (-t)', () => {
         exportTest.verifyAppErrorMessage(result, expectedError);
     });
 
-    test.skip('Case 303: Verify that data can be exported correctly when using both Basic Authentication and API Token', async () => {
+    test('Case 303: Verify that data can be exported correctly when using both Basic Authentication and API Token', async () => {
         // Delete existing records (if any), then prepare records for app with basice authentication
         const basicAuthUser = users.basicAuthUser;
         const basicAuthAppInfo = apps.basicAuthApp.appWithoutAttachment;

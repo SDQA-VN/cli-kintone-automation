@@ -3,7 +3,7 @@ import { users, importTestApps as apps, filePaths } from '../../common/config';
 import { getFieldArray } from '../../utils/csvUtils';
 import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 
-describe.skip('Import without --import option: Import data with number of records > 100', () => {
+describe('Import without --import option: Import data with number of records > 100', () => {
     const appInfo = apps.normalSpaceApp;
     const userCreds = users.admin;
     const importedCSVFile = filePaths.import_test.importCSVData110Record;

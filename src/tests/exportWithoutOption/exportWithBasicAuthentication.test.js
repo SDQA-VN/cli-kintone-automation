@@ -4,7 +4,7 @@ import { users, exportTestApps as apps, filePaths } from '../../common/config';
 import { getFieldArray } from '../../utils/csvUtils';
 import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 
-describe.skip('Export without --export option: Basic Authentication (-U) (-P)', () => {
+describe('Export without --export option: Basic Authentication (-U) (-P)', () => {
     const appInfo = apps.basicAuthApp.appWithoutAttachment;
     const basicAuthUser = users.basicAuthUser;
     const userCreds = users.admin;

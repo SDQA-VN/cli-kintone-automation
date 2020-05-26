@@ -4,7 +4,7 @@ import { makeQueryToGetAppData } from '../../common/helper';
 import { getFieldArray } from '../../utils/csvUtils';
 import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 
-describe.skip('Import with --import without option: Import new attachment with file (-b)', () => {
+describe('Import with --import without option: Import new attachment with file (-b)', () => {
     const appInfo = apps.normalSpaceApp;
     const userCreds = users.admin;
     const importedCSVFile = filePaths.import_test.importCSVDataWithAttachment;
@@ -66,7 +66,7 @@ describe.skip('Import with --import without option: Import new attachment with f
 
     // This case take a lot of time to execute, especially when the network is slow
     // So it will be temporary set as skip
-    test.skip('C229: Verify the case in which upload file size is large (e.g.. <=10 Mb)', async () => {
+    test('C229: Verify the case in which upload file size is large (e.g.. <=10 Mb)', async () => {
         const importedDataFile = filePaths.import_test.importCSVDataWithLargeAttachment;
         const importTest = new ImportTestCommon(appInfo, userCreds, importedDataFile, false);
 

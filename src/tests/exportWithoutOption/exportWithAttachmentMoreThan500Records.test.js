@@ -6,7 +6,7 @@ import { deleteAllAppData } from '../../utils/kintoneApiUtils';
 import { deleteFolderRecursive } from '../../utils/fileUtils';
 import * as Path from 'path';
 
-describe.skip('Export without --export option: Export data with number of records > 500', () => {
+describe('Export without --export option: Export data with number of records > 500', () => {
     let fieldNames = '';
     const appInfo = apps.normalSpaceApp.appWithAttachment;
     const userCreds = users.admin;
