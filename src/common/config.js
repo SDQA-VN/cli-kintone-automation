@@ -6,8 +6,8 @@ const userList = initialData.users.clone;
 const normalSpaceApps = initialData.normalSpaceInfo[0].apps;
 const guestSpaceApps = initialData.guestSpaceInfo[0].apps;
 const basicAuthNormalSpaceApps = initialDataBasicAuth.normalSpaceInfo[0].apps;
-const domain = initialData.domain;
-const basicAuthDomain = initialDataBasicAuth.domain;
+const domain = process.env.DOMAIN;
+const basicAuthDomain = process.env.BASIC_DOMAIN;
 
 const fileType = {
     csv: 'csv',
@@ -20,8 +20,8 @@ const fileInfo = {
 };
 
 const users = {
-    admin: new User('cybozu', 'demo@123'),
-    basicAuthUser: new User('admin', 'admin@123'),
+    admin: new User(process.env.ADMIN_USERNAME, process.env.ADMIN_PASSWORD),
+    basicAuthUser: new User(process.env.BASIC_USERNAME, process.env.BASIC_PASSWORD),
     normalUser: userList[0],
     userNoViewPermission: userList[1],
     userNoViewAttachmentFile: new User('user3', 'user3'),

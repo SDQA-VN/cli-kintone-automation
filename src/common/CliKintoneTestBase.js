@@ -81,7 +81,7 @@ export default class CliKintoneTestBase {
     verifyNonexistentDirectoryError(result) {
         let message = 'no such file or directory';
         if (process.platform === 'win32') {
-            message = 'The system cannot find the path specified.';
+            message = 'The system cannot find the file specified.';
         }
         expect(result.toString()).toEqual(expect.stringContaining(message));
     }

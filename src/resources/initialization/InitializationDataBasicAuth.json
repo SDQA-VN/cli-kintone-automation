@@ -1,9 +1,4 @@
 {
-  "domain": "clitool-test-basic.kintone.com",
-  "administrators": {
-    "username": "cybozu",
-    "password": "demo@123"
-  },
   "orgInfo": {
     "organizations": [
       {
@@ -30,19 +25,19 @@
         "username": "user1",
         "password": "user1",
         "code": "user1",
-        "id": "2"
+        "id": "3"
       },
       {
         "username": "user2",
         "password": "user2",
         "code": "user2",
-        "id": "3"
+        "id": "4"
       },
       {
         "username": "user3",
         "password": "user3",
         "code": "user3",
-        "id": "4"
+        "id": "5"
       }
     ]
   },
@@ -59,15 +54,15 @@
           "code": "",
           "name": "[Import] All Fields",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:25:37.000Z",
+          "createdAt": "2020-05-21T06:31:43.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:25:37.000Z",
+          "modifiedAt": "2020-05-21T06:31:43.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "2",
           "threadId": "2",
@@ -119,9 +114,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "EqMZYc9UCu9sYa7aYT4XuEFl9HAWtUCCHi9O68M4",
-            "managePermission": "btZYj3OufCsjPgLdJgyVvTCQZGKhtUfKlnVfd9ui",
-            "noPermission": "wTXrVyxIzkOqn01zeiRnhhnDQm0E9tyjh5Clw6Ea"
+            "fullPermission": "vlC4wnLKYE0I6rnUI2XC55daib8Wyt4UztAUpRQM",
+            "managePermission": "wnUemArZ99AisrRUtASRdnB6eWuWEtEsrEpviPpm",
+            "noPermission": "vlT7Gh34hgTDkzlOwUyO6NcJPgZvxboRcMw8ftxk"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -149,15 +144,15 @@
           "code": "",
           "name": "App4Lookup",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:25:37.000Z",
+          "createdAt": "2020-05-21T06:31:43.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:25:37.000Z",
+          "modifiedAt": "2020-05-21T06:31:43.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "2",
           "threadId": "2",
@@ -189,9 +184,9 @@
             "userNotHaveDeleteRight": ""
           },
           "apiToken": {
-            "fullPermission": "ieBiW6ZvfJnWP4S1s6z1P7lC4xVUDjvZyLbetrQS",
-            "managePermission": "uZ2IhxFm30xStYUg3UutOwmbiWO8dmSoKI4Szjhc",
-            "noPermission": "w5iOobmj6Aeyc3eGPy2FPOKI84DamM6Cg62oVEEH"
+            "fullPermission": "3XwBQ8I8ZhOoDr7ljwmY2GUE4c17xqT7dQS1MUs1",
+            "managePermission": "nFZshHrWXB1NWZkOIJkPruohIZJwLmpF4xouSnKx",
+            "noPermission": "L1Fw94UlyehqvwA7sQUvEbvtxfqabEKux7UrVVhy"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -219,15 +214,15 @@
           "code": "",
           "name": "[Export] All Fields (1)",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:25:37.000Z",
+          "createdAt": "2020-05-21T06:31:43.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:25:37.000Z",
+          "modifiedAt": "2020-05-21T06:31:43.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "2",
           "threadId": "2",
@@ -279,9 +274,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "SEp0NPokroTo8HDQXxlzgRhTdsXg6hDOmXCE3HU3",
-            "managePermission": "ZAtDsp3kCiKuI4g3bokSrPuycxJatAfGQOqFbnBI",
-            "noPermission": "ZjWRIE9XxAsZTwVh5G6eQOpH1jWxhc4iz845OdaQ"
+            "fullPermission": "YSrPf6aHKMOlC3td7rKeMhsCQsMJBzuBlnlf5n2m",
+            "managePermission": "yzByk76LvIJnFAmV6iReIn0zAqpzY722QZ7rDAb2",
+            "noPermission": "bo1hs7YLVsRCS31I7VJVbHPtaWAwN6d00UezPsp3"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -309,15 +304,15 @@
           "code": "",
           "name": "[Export] All Fields (2)",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:25:37.000Z",
+          "createdAt": "2020-05-21T06:31:43.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:25:37.000Z",
+          "modifiedAt": "2020-05-21T06:31:43.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "2",
           "threadId": "2",
@@ -369,9 +364,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "vxxDh2Dyl3E0ysk9FOCNLaleBncj8uZpQQGkDqCG",
-            "managePermission": "qQWgeI5a8SJo2ipEaQlnoUsbV7uRB1bBwhA4XLq4",
-            "noPermission": "TceQD2F9zKiVYR8qRNGnIpJPiSvGb7YPq64zJRD1"
+            "fullPermission": "tTkODxsKJF7fsAS6ERX7oqzwhBrWFNAvQ42ugytM",
+            "managePermission": "3AqFRREoSwkozl77lsT3JnkR0niIkWPzT37fZr52",
+            "noPermission": "RG9LjgkfxNsfJzz60rgeYK3uod34leOrtOzAkvPI"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -399,15 +394,15 @@
           "code": "",
           "name": "[Import] All Fields-Prohitbit Duplicate",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:25:37.000Z",
+          "createdAt": "2020-05-21T06:31:43.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:25:37.000Z",
+          "modifiedAt": "2020-05-21T06:31:43.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "2",
           "threadId": "2",
@@ -459,9 +454,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "1JtZsE0gyeVKpd8F0c7E8KpQSxBZJBCRAoW4iwkY",
-            "managePermission": "0amCbW7d8hAcp2mJQkGiht3BHtPtb1TMK70XA3RL",
-            "noPermission": "zQJONh3u7J1Bqm3D56Srv46ZgGbltUoOUBVmc8k6"
+            "fullPermission": "g8yxxplRp0W5ytyvpQV6QmUxzn8ytUC0eVrK4gC5",
+            "managePermission": "9p7gYwF2HXNB94x7u3yoEyB06DkBw67ECUjh8Tw6",
+            "noPermission": "eVEYug2yW5nu69GRGmSe5634bGte0zbcbcDZuD99"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -500,15 +495,15 @@
           "code": "",
           "name": "[Import] All Fields",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:27:05.000Z",
+          "createdAt": "2020-05-21T06:32:41.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:27:05.000Z",
+          "modifiedAt": "2020-05-21T06:32:41.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "4",
           "threadId": "4",
@@ -561,9 +556,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "S2eaVhIYnbUowXbmlv1Edev5bDbMXlSYcRssxyO3",
-            "managePermission": "3p03BaIjPyHD0zipJy6KhC8orJhn8TN2ACgW3xdZ",
-            "noPermission": "1zzgdWuHtlyVjcaIYbEgGDfNnL4CJk3xP8xCuDZh"
+            "fullPermission": "KL2cFUqy8Rl1NLN8zj2rxUAcJL5sSMuflPaf86BJ",
+            "managePermission": "N8UUWlh0bo59DNKGcVnfVrAqMOC00O6rofBuXmIq",
+            "noPermission": "mDHl4SKI3PhlR6sAwb3zuZYV1z2jK9FDRnxPQvmc"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -591,15 +586,15 @@
           "code": "",
           "name": "App4Lookup",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:27:05.000Z",
+          "createdAt": "2020-05-21T06:32:41.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:27:05.000Z",
+          "modifiedAt": "2020-05-21T06:32:41.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "4",
           "threadId": "4",
@@ -631,9 +626,9 @@
             "userNotHaveDeleteRight": ""
           },
           "apiToken": {
-            "fullPermission": "d2F8dwOUsHOfLnhE9xHgALLssk1HU87tGJPUXzJx",
-            "managePermission": "Gf8MO3cGvb2YCl637RSW1yDgvTTlFQyO0RYpKqDt",
-            "noPermission": "YFFNaSQ9fSZe8CrNQn33o8VnPkfLGisTJisHHcDv"
+            "fullPermission": "GOVepUrKBhdR83NkUqptAmqSkGWQLq0IUEvrJkQV",
+            "managePermission": "mRbJ6zgojpi2kF71z4MgQfwZ513KeJ81bbXnLAKg",
+            "noPermission": "Zjx2epxp5Qv5ddcZjP28Hr171LLAu9Ie2N69CmvV"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -661,15 +656,15 @@
           "code": "",
           "name": "[Export] All Fields (1)",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:27:05.000Z",
+          "createdAt": "2020-05-21T06:32:41.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:27:05.000Z",
+          "modifiedAt": "2020-05-21T06:32:41.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "4",
           "threadId": "4",
@@ -722,9 +717,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "8jEqSsiEu9XKsElC0lyzboztzf7ZHwwINoK6V8K1",
-            "managePermission": "y3b025IH4qghpvd7UCL62GIc8gH6ZYKeBUMcrKrs",
-            "noPermission": "MMcwcSl21Vys0muBXARTw2UN42HpmF3in0yk9yav"
+            "fullPermission": "Z2eW2ScBXqJ9UmQe8nP7iuCXuFQPgHWlGQznB2cw",
+            "managePermission": "hwuPu4u6dwVzhZdvG9Jl9PR4F5zziimQj2S3za1L",
+            "noPermission": "hDFH0MmR39Z182qitmqLbpneanmM0WVE7lD0sjmb"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -752,15 +747,15 @@
           "code": "",
           "name": "[Export] All Fields (2)",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:27:05.000Z",
+          "createdAt": "2020-05-21T06:32:41.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:27:05.000Z",
+          "modifiedAt": "2020-05-21T06:32:41.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "4",
           "threadId": "4",
@@ -813,9 +808,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "lhCOUz8zGkYpiGQiJoGV5UMisrjiTxobNqH7K9bD",
-            "managePermission": "wzZRvShPBcnfI4KNE6MRDT8T5IpUq2MgKokursGF",
-            "noPermission": "ZHWcfjzePzyIuSZc0eYBkGK2EiXEwALFwBW7R5hf"
+            "fullPermission": "xWbk1sVC5oZVW1hwTWQ8GLFJTZVi7D3wZvq8PWeO",
+            "managePermission": "VCbS3C8AZgZXbqXetJp7Ns1uUyoPwsvTfp60kZyA",
+            "noPermission": "8DBBDBNTnZxJODidyhBYftCc9mPFDMBxZBmidixp"
           },
           "userPermissions": {
             "userAppPermissions": {
@@ -843,15 +838,15 @@
           "code": "",
           "name": "[Import] All Fields-Prohitbit Duplicate",
           "description": "<div><br /></div>",
-          "createdAt": "2020-04-27T07:27:05.000Z",
+          "createdAt": "2020-05-21T06:32:41.000Z",
           "creator": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
-          "modifiedAt": "2020-04-27T07:27:05.000Z",
+          "modifiedAt": "2020-05-21T06:32:41.000Z",
           "modifier": {
-            "code": "cybozu",
-            "name": "cybozu"
+            "code": "admin",
+            "name": "admin"
           },
           "spaceId": "4",
           "threadId": "4",
@@ -904,9 +899,9 @@
             "userNotHaveRightOnAttachmentField": "user3"
           },
           "apiToken": {
-            "fullPermission": "gY4pmCI05tA36PmbeWz59qZEmWhvzCPCpdHfLTi3",
-            "managePermission": "fmKgRPDwLh4Ncn7DOkd5Y1dPeqxLJgrChRiHcTTE",
-            "noPermission": "rP03BgDsLS4Vg1PnYnNNLSzvQLdlzzh7IwENzKAy"
+            "fullPermission": "PpAiaKp7u6nwtJmPIo9K4W7A1dCvdaL7Bad2fTKD",
+            "managePermission": "mTrOvjOoYlnd9Og2yP0SMRWUHIstHKAu9frfF8d0",
+            "noPermission": "yHMngk1dkbhoNw5qv1kLcqO9T6aBEVe5U9qocD3C"
           },
           "userPermissions": {
             "userAppPermissions": {

@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: cli-kintone Test Automation
 
 on:
   push:
@@ -9,40 +9,26 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron: '*/59 * * * *'
+    - cron: '0 0,6,12,18 * * *'
+
+env:
+  RELEASE_VERSION: ${{ secrets.RELEASE_VERSION }}
+  DOMAIN: ${{ secrets.DOMAIN }}
+  BASIC_DOMAIN: ${{ secrets.BASIC_DOMAIN }}
+  USERNAME: ${{ secrets.USERNAME }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  BASIC_USERNAME: ${{ secrets.BASIC_USERNAME }}
+  BASIC_PASSWORD: ${{ secrets.BASIC_PASSWORD }}
 
 jobs:
-   test_mac:
-     strategy:
-       matrix:
-         platform: [ macos-latest ]
-         node-version: [ 12.16.3 ]
-     runs-on: ${{ matrix.platform }}
-
-     steps:
-     - uses: actions/checkout@v2
-     - name: Use Node.js ${{ matrix.node-version }}
-       uses: actions/setup-node@v1
-       with:
-         node-version: ${{ matrix.node-version }}
-     - run: npm install
-     - name: import test with --import option
-       run: npm run test src/tests/importWithOption
-     - name: import test without --import option
-       run: npm run test src/tests/importWithoutOption
-     - name: export test with --export option
-       run: npm run test src/tests/exportWithOption
-     - name: export test without --export option
-       run: npm run test src/tests/exportWithoutOption
-   test_linux:
-     needs: test_mac
-     strategy:
+  test_mac:
+    strategy:
       matrix:
-        platform: [ ubuntu-latest ]
+        platform: [ macos-latest ]
         node-version: [ 12.16.3 ]
-     runs-on: ${{ matrix.platform }}
+    runs-on: ${{ matrix.platform }}
 
-     steps:
+    steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -57,14 +43,38 @@ jobs:
         run: npm run test src/tests/exportWithOption
       - name: export test without --export option
         run: npm run test src/tests/exportWithoutOption
-   test_windows:
-     needs: [ test_mac, test_linux ]
-     strategy:
+  test_linux:
+    needs: test_mac
+    strategy:
+      matrix:
+        platform: [ ubuntu-latest ]
+        node-version: [ 12.16.3 ]
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - name: import test with --import option
+        run: npm run test src/tests/importWithOption
+      - name: import test without --import option
+        run: npm run test src/tests/importWithoutOption
+      - name: export test with --export option
+        run: npm run test src/tests/exportWithOption
+      - name: export test without --export option
+        run: npm run test src/tests/exportWithoutOption
+  test_windows:
+    needs: [ test_mac, test_linux ]
+    strategy:
       matrix:
         platform: [ windows-latest ]
         node-version: [ 12.16.3 ]
-     runs-on: ${{ matrix.platform }}
-     steps:
+    runs-on: ${{ matrix.platform }}
+
+    steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
