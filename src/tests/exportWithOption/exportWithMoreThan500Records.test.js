@@ -29,7 +29,7 @@ describe('Export with --export option: Export data with number of records > 500'
         await exportTest.exportWithUserNamePassword();
 
         const expectedExportedDataFile = filePaths.export_test.exportJsonDataJpEuc510RecordExpected;
-        await exportTest.verifyExportedData(actualExportedJsonDataFile, expectedExportedDataFile);
+        await exportTest.verifyExportedData(actualExportedJsonDataFile, expectedExportedDataFile, true);
     });
 
     test('Case 154: Verify that data can be exported to a file with utf-8 encoding', async () => {
