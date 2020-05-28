@@ -8,7 +8,8 @@ on:
     branches: [ refactor ]
   pull_request:
     branches: [ refactor ]
-
+  schedule:
+    - cron: '0 3,9,15,21 * * *'
 env:
   RELEASE_VERSION: ${{ secrets.RELEASE_VERSION }}
   DOMAIN: ${{ secrets.DOMAIN }}
