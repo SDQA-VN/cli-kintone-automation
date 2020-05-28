@@ -204,8 +204,9 @@ export default class ExportTestCommon extends CliKintoneTestBase {
                 for (const element of attachmentField) {
                     if (os_system === 'win32') {
                         actualAttachmentFileNames.push(`Attachment-${i}\\` + element.name);
+                    } else {
+                        actualAttachmentFileNames.push(`Attachment-${i}/` + element.name);
                     }
-                    actualAttachmentFileNames.push(`Attachment-${i}/` + element.name);
                     const res = await getFileContentByApi(
                         this._appInfo,
                         this._auth,

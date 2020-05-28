@@ -86,7 +86,7 @@ describe('Export without --export option: Export data with number of records > 5
         await exportTest.exportWithUserNamePassword();
 
         const expectedExportedDataFile = filePaths.export_test.exportJsonDataJpEuc510RecordExpected;
-        await exportTest.verifyExportedData(actualExportedJsonDataFile, expectedExportedDataFile);
+        await exportTest.verifyExportedData(actualExportedJsonDataFile, expectedExportedDataFile, true);
     });
 
     test('Case 315: Verify that data can be exported to a file with utf-16 encoding', async () => {
