@@ -4,6 +4,8 @@
 name: cli-kintone Test Automation
 
 on:
+  push:	
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
