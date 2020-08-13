@@ -4,12 +4,9 @@
 name: cli-kintone Test Automation (run all testcase)
 
 on:
-  push:
-    branches: [ refactor ]
   pull_request:
     branches: [ refactor ]
-  schedule:
-    - cron: '0 3,21 * * *'
+
 env:
   RELEASE_VERSION: ${{ secrets.RELEASE_VERSION }}
   DOMAIN: ${{ secrets.DOMAIN }}
