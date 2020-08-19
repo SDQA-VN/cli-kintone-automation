@@ -155,7 +155,7 @@ module.exports = async () => {
     const path = './' + buildInfo.fileName;
 
     if (!fs.existsSync(path)) {
-        console.log('\n--------- START PREPARATION CLI-KINTONE BUILD ----------');
+        console.log(`\n--------- START PREPARATION CLI-KINTONE BUILD ${releasedVersion} ----------`);
         await downloadCliKintoneBuild(buildInfo.releasedUrl, buildInfo.archiveName);
 
         console.log('start unzip ... ');
@@ -174,7 +174,7 @@ module.exports = async () => {
         await removeBuildArchive(buildInfo.archiveName);
         console.log('remove finished ... ');
 
-        console.log('--------- FINISHED PREPARATION CLI-KINTONE BUILD ----------');
+        console.log(`--------- FINISHED PREPARATION CLI-KINTONE BUILD ${releasedVersion}----------`);
     } else {
         console.log('\n--------- CLI-KINTONE EXIT ----------');
     }
