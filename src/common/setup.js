@@ -156,7 +156,7 @@ module.exports = async () => {
 
     if (!fs.existsSync(path)) {
         console.log(`\n--------- START PREPARATION CLI-KINTONE BUILD ${releasedVersion}----------`);
-        await downloadCliKintoneBuild(buildInfo.releasedUrl, buildInfo.archiveName);
+        // await downloadCliKintoneBuild(buildInfo.releasedUrl, buildInfo.archiveName);
 
         console.log('start unzip ... ');
         await unzipCliKintoneBuild(buildInfo.archiveName);
@@ -166,13 +166,13 @@ module.exports = async () => {
         await moveCliKintoneToRootFolder(buildInfo.filePath, buildInfo.fileName);
         console.log('move finished ... ');
 
-        console.log('remove build folder ... ');
-        await removeBuildFolder('./build');
-        console.log('remove finished ... ');
-
-        console.log('remove archive folder ... ');
-        await removeBuildArchive(buildInfo.archiveName);
-        console.log('remove finished ... ');
+        // console.log('remove build folder ... ');
+        // await removeBuildFolder('./build');
+        // console.log('remove finished ... ');
+        //
+        // console.log('remove archive folder ... ');
+        // await removeBuildArchive(buildInfo.archiveName);
+        // console.log('remove finished ... ');
 
         console.log(`--------- FINISHED PREPARATION CLI-KINTONE BUILD ${releasedVersion}----------`);
     } else {
