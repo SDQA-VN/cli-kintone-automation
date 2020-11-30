@@ -24,7 +24,7 @@ const getCompatibleBuild = platform => {
         case platforms.macOS:
             buildInfo = {
                 fileName: 'cli-kintone',
-                filePath: 'build/macos-x64/',
+                filePath: 'macos-x64/',
                 archiveName: 'macos-x64.zip',
                 releasedUrl: `${baseReleasedUrl}/macos-x64.zip`,
             };
@@ -32,7 +32,7 @@ const getCompatibleBuild = platform => {
         case platforms.windows:
             buildInfo = {
                 fileName: 'cli-kintone.exe',
-                filePath: 'build/windows-x64/',
+                filePath: 'windows-x64/',
                 archiveName: 'windows-x64.zip',
                 releasedUrl: `${baseReleasedUrl}/windows-x64.zip`,
             };
@@ -41,7 +41,7 @@ const getCompatibleBuild = platform => {
             // linux cases
             buildInfo = {
                 fileName: 'cli-kintone',
-                filePath: 'build/linux-x64/',
+                filePath: 'linux-x64/',
                 archiveName: 'linux-x64.zip',
                 releasedUrl: `${baseReleasedUrl}/linux-x64.zip`,
             };
