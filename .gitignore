@@ -3,4 +3,5 @@
 node_modules
 src/resources/export_data.csv
 cli-kintone
+package-lock.json
 ./reports

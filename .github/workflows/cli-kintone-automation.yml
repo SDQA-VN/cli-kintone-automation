@@ -5,9 +5,9 @@ name: cli-kintone Test Automation
 
 on:
   push:
-    branches: [ refactor ]
+    branches: [ SSR-1064_test ]
   pull_request:
-    branches: [ refactor ]
+    branches: [ SSR-1064_test ]
   schedule:
     - cron: '0 3,9,15,21 * * *'
 env:
