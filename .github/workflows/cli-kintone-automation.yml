@@ -5,11 +5,11 @@ name: cli-kintone Test Automation
 
 on:
   push:
-    branches: [ refactor ]
+    branches: [ Test ]
   pull_request:
-    branches: [ refactor ]
-  schedule:
-    - cron: '0 3,9,15,21 * * *'
+    branches: [ Test ]
+#   schedule:
+#     - cron: '0 3,9,15,21 * * *'
 env:
   RELEASE_VERSION: ${{ secrets.RELEASE_VERSION }}
   DOMAIN: ${{ secrets.DOMAIN }}
