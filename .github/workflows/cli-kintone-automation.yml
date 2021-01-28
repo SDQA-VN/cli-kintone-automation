@@ -89,3 +89,4 @@ jobs:
         run: npm run test src/tests/exportWithOption
       - name: export test without --export option
         run: npm run test src/tests/exportWithoutOption
+        
