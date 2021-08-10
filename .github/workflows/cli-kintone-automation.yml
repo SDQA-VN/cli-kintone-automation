@@ -4,10 +4,11 @@
 name: cli-kintone Test Automation
 
 on:
-  repository_dispatch:
-    types: cli-kintone-trigger-auto-test
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch:
+#   repository_dispatch:
+#     types: cli-kintone-trigger-auto-test
+#   pull_request:
+#     branches: [ master ]
 
 env:
   RELEASE_VERSION: ${{ secrets.RELEASE_VERSION }}
