@@ -8,6 +8,7 @@ const releasedVersion = process.env.RELEASE_VERSION;
 
 const baseReleasedUrl = `https://github.com/kintone-labs/cli-kintone/releases/download/${releasedVersion}`;
     // Ref: https://nodejs.org/api/process.html#process_process_platform
+const platforms = {
     macOS: 'darwin',
     windows: 'win32',
     linux: ['linux', 'freebsd', 'openbsd', 'sunos', 'aix'],
