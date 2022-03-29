@@ -6,8 +6,7 @@ const progress = require('cli-progress');
 
 const releasedVersion = process.env.RELEASE_VERSION;
 
-const baseReleasedUrl = `https://github.com/kintone/cli-kintone/releases/download/${releasedVersion}`;
-const platforms = {
+const baseReleasedUrl = `https://github.com/kintone-labs/cli-kintone/releases/download/${releasedVersion}`;
     // Ref: https://nodejs.org/api/process.html#process_process_platform
     macOS: 'darwin',
     windows: 'win32',
