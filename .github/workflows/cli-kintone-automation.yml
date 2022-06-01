@@ -5,15 +5,27 @@ name: cli-kintone Test Automation
 
 on:
   workflow_dispatch:
-#   repository_dispatch:
-#     types: cli-kintone-trigger-auto-test
-#   pull_request:
-#     branches: [ master ]
-  schedule:
-    - cron: '0 17 * * 1-5'
+    inputs:
+      platform:
+        type: choice
+        description: 'Platform'
+        required: true
+        default: 'ALL'
+        options:
+          - All
+          - macos-latest
+          - linux-latest
+          - windows-latest
+      releaseVersion:
+        type: string
+        description: 'Release version, Eg: v0.14.0'
+        required: false
+
+#  schedule:
+#    - cron: '0 17 * * 1-5'
 
 env:
-  RELEASE_VERSION: ${{ secrets.RELEASE_VERSION }}
+  RELEASE_VERSION: ${{ github.event.inputs.releaseVersion }}
   DOMAIN: ${{ secrets.DOMAIN }}
   BASIC_DOMAIN: ${{ secrets.BASIC_DOMAIN }}
   USERNAME: ${{ secrets.USERNAME }}
@@ -22,71 +34,54 @@ env:
   BASIC_PASSWORD: ${{ secrets.BASIC_PASSWORD }}
 
 jobs:
-  test_mac:
+  handle-inputs:
+    name: Handle parameters
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - id: handle-parameter
+        run: |
+          platform="['${{ github.event.inputs.platform }}']"
+          if [[ "${{ github.event.inputs.platform }}" == "All" ]]; then platform="['macos-latest','linux-latest','windows-latest']"; fi
+          echo "::set-output name=platform::$platform"
+          echo "PLATFORM=$platform" >> $GITHUB_ENV
+          execution_message="RELEASE_VERSION:${{ github.event.inputs.releaseVersion }} - Platforms: $platform"
+          echo "::notice title=Using workflow from branch::${GITHUB_REF##*/}"
+          echo "::notice title=Test info::$execution_message"
+    outputs:
+      platform: ${{ steps.handle-parameter.outputs.platform }}
+
+  test:
+    name: ${{ matrix.platform }}
+    needs: [ handle-inputs ]
     strategy:
+      fail-fast: false
+      max-parallel: 1
       matrix:
-        platform: [ macos-latest ]
-        node-version: [ 12.16.3 ]
+        platform: ${{ fromJSON(needs.handle-inputs.outputs.platform) }}
     runs-on: ${{ matrix.platform }}
+    timeout-minutes: 150
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
+          node-version: 12.16.3
+      - name: Install npm packages
+        run: npm install
       - name: import test with --import option
+        if: |
+          !cancelled()
         run: npm run test src/tests/importWithOption
       - name: import test without --import option
+        if: |
+          !cancelled()
         run: npm run test src/tests/importWithoutOption
       - name: export test with --export option
+        if: |
+          !cancelled()
         run: npm run test src/tests/exportWithOption
       - name: export test without --export option
-        run: npm run test src/tests/exportWithoutOption
-  test_linux:
-    needs: test_mac
-    strategy:
-      matrix:
-        platform: [ ubuntu-latest ]
-        node-version: [ 12.16.3 ]
-    runs-on: ${{ matrix.platform }}
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - name: import test with --import option
-        run: npm run test src/tests/importWithOption
-      - name: import test without --import option
-        run: npm run test src/tests/importWithoutOption
-      - name: export test with --export option
-        run: npm run test src/tests/exportWithOption
-      - name: export test without --export option
-        run: npm run test src/tests/exportWithoutOption
-  test_windows:
-    needs: [ test_mac, test_linux ]
-    strategy:
-      matrix:
-        platform: [ windows-latest ]
-        node-version: [ 12.16.3 ]
-    runs-on: ${{ matrix.platform }}
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - name: import test with --import option
-        run: npm run test src/tests/importWithOption
-      - name: import test without --import option
-        run: npm run test src/tests/importWithoutOption
-      - name: export test with --export option
-        run: npm run test src/tests/exportWithOption
-      - name: export test without --export option
+        if: |
+          !cancelled()
         run: npm run test src/tests/exportWithoutOption
