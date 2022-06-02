@@ -14,7 +14,7 @@ on:
         options:
           - All
           - macos-latest
-          - linux-latest
+          - ubuntu-latest
           - windows-latest
       releaseVersion:
         type: string
@@ -42,7 +42,7 @@ jobs:
       - id: handle-parameter
         run: |
           platform="['${{ github.event.inputs.platform }}']"
-          if [[ "${{ github.event.inputs.platform }}" == "All" ]]; then platform="['macos-latest','linux-latest','windows-latest']"; fi
+          if [[ "${{ github.event.inputs.platform }}" == "All" ]]; then platform="['macos-latest','ubuntu-latest','windows-latest']"; fi
           echo "::set-output name=platform::$platform"
           echo "PLATFORM=$platform" >> $GITHUB_ENV
           execution_message="RELEASE_VERSION:${{ github.event.inputs.releaseVersion }} - Platforms: $platform"
